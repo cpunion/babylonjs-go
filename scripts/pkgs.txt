@@ -1,0 +1,9 @@
+babylonjs/babylon.js
+babylonjs-viewer/babylon.viewer.js
+babylonjs-loaders/babylonjs.loaders.min.js
+babylonjs-materials/babylonjs.materials.min.js
+babylonjs-serializers/babylonjs.serializers.min.js
+babylonjs-inspector/babylon.inspector.bundle.js
+babylonjs-gui/babylon.gui.min.js
+babylonjs-gui-editor/babylon.guiEditor.js
+babylonjs-viewer-assets/dist/babylon.viewer.assets.js
