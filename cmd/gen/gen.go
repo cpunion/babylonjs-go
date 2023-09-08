@@ -107,6 +107,7 @@ import (
 )
 
 func TestCompile(t *testing.T) {
+	fmt.Printf("%%s, %%d\\n", babylon.JSFile, len(babylon.JSData))
 %s
 }
 `, strings.Join(imports, "\n"), strings.Join(tests, "\n"))
