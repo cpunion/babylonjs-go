@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/cpunion/babylonjs-go/viewer"
+	"github.com/cpunion/babylonjs-go/v6/viewer"
 	xfs "github.com/qiniu/x/http/fs"
 	"github.com/qiniu/x/shell"
 )

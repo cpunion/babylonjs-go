@@ -93,7 +93,7 @@ func genTest(pkgs []string) {
 		if pkg == "babylonjs" {
 			continue
 		}
-		imports = append(imports, fmt.Sprintf("\t\"github.com/cpunion/babylonjs-go/%s\"", pkg))
+		imports = append(imports, fmt.Sprintf("\t\"github.com/cpunion/babylonjs-go/v6/%s\"", pkg))
 		tests = append(tests, fmt.Sprintf("\tfmt.Printf(\"%%s, %%d\\n\", %s.JSFile, len(%s.JSData))", pkg, pkg))
 	}
 	sort.Strings(imports)
