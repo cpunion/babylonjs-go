@@ -15,9 +15,9 @@ test:
 
 release:
 	./scripts/version.sh
-	if git rev-parse $(BABYLONJS_VERSION) >/dev/null 2>&1; then
-		echo "Version $(BABYLONJS_VERSION) already exists"
-		exit 0
+	if git rev-parse $(BABYLONJS_VERSION) >/dev/null 2>&1; then \
+		echo "Version $(BABYLONJS_VERSION) already exists" \
+		exit 0 \
 	fi
 	# Add files to git
 	TAG=v$(BABYLONJS_VERSION)
