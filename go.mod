@@ -1,5 +1,3 @@
-module github.com/cpunion/babylonjs-go
+module github.com/cpunion/babylonjs-go/v6
 
 go 1.20
-
-require github.com/qiniu/x v1.12.9
