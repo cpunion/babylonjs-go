@@ -15,6 +15,7 @@ import (
 )
 
 func TestCompile(t *testing.T) {
+	fmt.Printf("%s, %d\n", JSFile, len(JSData))
 	fmt.Printf("%s, %d\n", viewer.JSFile, len(viewer.JSData))
 	fmt.Printf("%s, %d\n", loaders.JSFile, len(loaders.JSData))
 	fmt.Printf("%s, %d\n", materials.JSFile, len(materials.JSData))
