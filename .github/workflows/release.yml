@@ -7,7 +7,7 @@ on:
     branches: ["main"]
 
 jobs:
-  check:
+  Build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -23,17 +23,17 @@ jobs:
           node-version: 18.x
 
       - name: Install Babylon.js packages
-        run: scripts/install.sh
+        run: make pkg
 
       - name: Generate code
-        run: scripts/gen.sh
+        run: make gen
 
       - name: Build
-        run: go build -v ./...
+        run: make build
 
       - name: Test
-        run: go test -v ./...
+        run: make test
 
       - name: Release version
-        run: scripts/release.sh
         if: ${{ github.ref == 'refs/heads/main' }}
+        run: make release
