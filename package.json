@@ -7,20 +7,20 @@
   "author": "Li Jie",
   "license": "MIT",
   "dependencies": {
-    "babylonjs": "6.18.0",
+    "babylonjs": "6.19.0",
     "babylonjs-accessibility": "6.18.0",
-    "babylonjs-gui": "6.18.0",
-    "babylonjs-gui-editor": "6.18.0",
-    "babylonjs-inspector": "6.18.0",
+    "babylonjs-gui": "6.19.0",
+    "babylonjs-gui-editor": "6.19.0",
+    "babylonjs-inspector": "6.19.0",
     "babylonjs-ktx2decoder": "6.18.0",
-    "babylonjs-loaders": "6.18.0",
-    "babylonjs-materials": "6.18.0",
+    "babylonjs-loaders": "6.19.0",
+    "babylonjs-materials": "6.19.0",
     "babylonjs-node-editor": "6.18.0",
     "babylonjs-node-geometry-editor": "6.18.0",
     "babylonjs-post-process": "6.18.0",
     "babylonjs-procedural-textures": "6.18.0",
-    "babylonjs-serializers": "6.18.0",
-    "babylonjs-viewer": "6.18.0",
-    "babylonjs-viewer-assets": "6.18.0"
+    "babylonjs-serializers": "6.19.0",
+    "babylonjs-viewer": "6.19.0",
+    "babylonjs-viewer-assets": "6.19.0"
   }
 }
