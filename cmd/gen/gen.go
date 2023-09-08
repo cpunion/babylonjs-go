@@ -5,6 +5,7 @@ import (
 	"io"
 	"os"
 	"path/filepath"
+	"sort"
 	"strings"
 )
 
@@ -13,26 +14,20 @@ package babylonjs
 
 import (
 	"embed"
-	"sync"
 )
 
 //go:embed babylon.js
 var FS embed.FS
+var JS []byte
 
-const jsFile = "babylon.js"
+const JSFile = "babylon.js"
 
-var js []byte
-var once sync.Once
-
-func JS() []byte {
-	once.Do(func() {
-		var err error
-		js, err = FS.ReadFile(jsFile)
-		if err != nil {
-			panic(err)
-		}
-	})
-	return js
+func init() {
+	var err error
+	JS, err = FS.ReadFile(jsFile)
+	if err != nil {
+		panic(err)
+	}
 }
 */
 
@@ -44,25 +39,20 @@ func makePkg(pkg, dir, jsFile string) error {
 	code := fmt.Sprintf("package %s\n\n", pkg)
 	code += `import (
 	"embed"
-	"sync"
 )
 
 `
 	code += fmt.Sprintf("//go:embed %s\n", jsFile)
-	code += "var FS embed.FS\n\n"
-	code += fmt.Sprintf("const JSFile = \"%s\"\n\n", jsFile)
-	code += `var js []byte
-var once sync.Once
-
-func JS() []byte {
-	once.Do(func() {
-		var err error
-		js, err = FS.ReadFile(JSFile)
-		if err != nil {
-			panic(err)
-		}
-	})
-	return js
+	code += "var FS embed.FS\n"
+	code += "var JSData []byte\n\n"
+	code += fmt.Sprintf("const JSFile = \"%s\"\n", jsFile)
+	code += `
+func init() {
+	var err error
+	JSData, err = FS.ReadFile(JSFile)
+	if err != nil {
+		panic(err)
+	}
 }
 `
 	folder := pkg
@@ -96,6 +86,37 @@ func copyFile(src, dst string) error {
 	return err
 }
 
+func genTest(pkgs []string) {
+	imports := []string{}
+	tests := []string{}
+	for _, pkg := range pkgs {
+		if pkg == "babylonjs" {
+			continue
+		}
+		imports = append(imports, fmt.Sprintf("\t\"github.com/cpunion/babylonjs-go/%s\"", pkg))
+		tests = append(tests, fmt.Sprintf("\tfmt.Printf(\"%%s, %%d\\n\", %s.JSFile, len(%s.JSData))", pkg, pkg))
+	}
+	sort.Strings(imports)
+	code := fmt.Sprintf(`package babylonjs
+
+import (
+	"fmt"
+	"testing"
+
+%s
+)
+
+func TestCompile(t *testing.T) {
+%s
+}
+`, strings.Join(imports, "\n"), strings.Join(tests, "\n"))
+
+	err := os.WriteFile("compile_test.go", []byte(code), 0644)
+	if err != nil {
+		panic(err)
+	}
+}
+
 func main() {
 	file := "pkgs.txt"
 	if len(os.Args) > 1 {
@@ -105,6 +126,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	pkgs := make([]string, 0)
 	lines := strings.Split(string(content), "\n")
 	for _, path := range lines {
 		if len(path) == 0 {
@@ -112,11 +134,13 @@ func main() {
 		}
 		jsFile := filepath.Base(path)
 		dir := filepath.Dir(path)
-		pkg := strings.ReplaceAll(strings.TrimPrefix(dir, "babylonjs-"), "-", "_")
-		pkg = strings.Split(pkg, "/")[0]
+		pkg := strings.Split(dir, "/")[0]
+		pkg = strings.ReplaceAll(strings.TrimPrefix(pkg, "babylonjs-"), "-", "_")
+		pkgs = append(pkgs, pkg)
 		err := makePkg(pkg, dir, jsFile)
 		if err != nil {
 			panic(err)
 		}
 	}
+	genTest(pkgs)
 }
