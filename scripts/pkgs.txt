@@ -7,3 +7,9 @@ babylonjs-inspector/babylon.inspector.bundle.js
 babylonjs-gui/babylon.gui.min.js
 babylonjs-gui-editor/babylon.guiEditor.js
 babylonjs-viewer-assets/dist/babylon.viewer.assets.js
+babylonjs-accessibility/babylon.accessibility.js
+babylonjs-ktx2decoder/babylon.ktx2Decoder.js
+babylonjs-node-editor/babylon.nodeEditor.js
+babylonjs-node-geometry-editor/babylon.nodeGeometryEditor.js
+babylonjs-post-process/babylonjs.postProcess.min.js
+babylonjs-procedural-textures/babylonjs.proceduralTextures.min.js
