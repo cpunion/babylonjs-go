@@ -1,5 +1,5 @@
 #!/bin/sh
 
-VERSION=6.18.0
+source scripts/version.sh
 
-cat scripts/pkgs.txt | sed -e 's/\/.*$//' | xargs -I {} yarn add {}@$VERSION
+cat scripts/pkgs.txt | sed -e 's/\/.*$//' | xargs -I {} yarn add {}@$BABYLONJS_VERSION
