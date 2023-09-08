@@ -1,4 +1,4 @@
-github.com/cpunion/babylonjs-go v0.0.0-20230908041716-15afa5210b41 h1:wUAY8d4GctjuyRV90IHvoKyhiOXnaCpWvyTYyBB025M=
-github.com/cpunion/babylonjs-go v0.0.0-20230908041716-15afa5210b41/go.mod h1:RB4752tNeBgcrgoaibHPFL9/kd8FQG5Er65y8bkudXA=
+github.com/cpunion/babylonjs-go/v6 v6.20.0 h1:D+06TcoiQWdEYnqUP8KiXaLVLjZGypCrq2IDnMXwfRY=
+github.com/cpunion/babylonjs-go/v6 v6.20.0/go.mod h1:jlDYoCM+1SvgAfOerhxhkeaO8L/mFgGr3hy2ARhVx0w=
 github.com/qiniu/x v1.12.12 h1:n/sLIh486W4F0qxVs7DAuFL95fFaca9ftnaEulYlrJo=
 github.com/qiniu/x v1.12.12/go.mod h1:03Ni9tj+N2h2aKnAz+6N0Xfl8FwMEDRC2PAlxekASDs=
