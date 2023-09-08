@@ -36,4 +36,7 @@ jobs:
 
       - name: Release version
         if: ${{ github.ref == 'refs/heads/main' }}
-        run: make release
+        run: |
+          git config --global user.email "release@bot.com"
+          git config --global user.name "Release Bot"
+          make release
