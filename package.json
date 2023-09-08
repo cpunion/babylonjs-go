@@ -1,6 +1,6 @@
 {
   "name": "babylonjs-go",
-  "version": "6.19.0",
+  "version": "6.19.1",
   "description": "Go embed for Babylon.js",
   "main": "index.js",
   "repository": "https://github.com/cpunion/babylonjs-go",
