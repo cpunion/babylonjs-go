@@ -20,7 +20,7 @@
     "babylonjs-post-process": "6.20.2",
     "babylonjs-procedural-textures": "6.20.2",
     "babylonjs-serializers": "6.20.2",
-    "babylonjs-viewer": "6.20.2",
+    "babylonjs-viewer": "6.21.0",
     "babylonjs-viewer-assets": "6.20.2"
   }
 }
