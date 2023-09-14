@@ -18,7 +18,7 @@
     "babylonjs-node-editor": "6.20.0",
     "babylonjs-node-geometry-editor": "6.20.0",
     "babylonjs-post-process": "6.20.0",
-    "babylonjs-procedural-textures": "6.20.0",
+    "babylonjs-procedural-textures": "6.20.2",
     "babylonjs-serializers": "6.20.0",
     "babylonjs-viewer": "6.20.0",
     "babylonjs-viewer-assets": "6.20.0"
