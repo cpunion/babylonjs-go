@@ -10,7 +10,7 @@
     "babylonjs": "6.20.2",
     "babylonjs-accessibility": "6.20.2",
     "babylonjs-gui": "6.20.2",
-    "babylonjs-gui-editor": "6.20.2",
+    "babylonjs-gui-editor": "6.21.0",
     "babylonjs-inspector": "6.20.2",
     "babylonjs-ktx2decoder": "6.20.2",
     "babylonjs-loaders": "6.20.2",
