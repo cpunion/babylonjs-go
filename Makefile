@@ -1,8 +1,10 @@
-BABYLONJS_VERSION := v$(shell node -p "require('./package.json').version")
+VERSION=$(shell node -p "require('./package.json').dependencies.babylonjs")
+BABYLONJS_VERSION := v$(VERSION)
 
 all: pkg gen build test
 
 pkg:
+	sed -i -e 's/"version": "[^"]*"/"version": "$(VERSION)"/' package.json
 	cat scripts/pkgs.txt | sed -e 's/\/.*$$//' | xargs -I {} yarn add {}@$(BABYLONJS_VERSION)
 
 gen:
