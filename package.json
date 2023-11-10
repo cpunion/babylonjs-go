@@ -1,6 +1,6 @@
 {
   "name": "babylonjs-go",
-  "version": "6.28.1",
+  "version": "6.29.0",
   "description": "Go embed for Babylon.js",
   "main": "index.js",
   "repository": "https://github.com/cpunion/babylonjs-go",
@@ -8,19 +8,19 @@
   "license": "MIT",
   "dependencies": {
     "babylonjs": "6.29.0",
-    "babylonjs-accessibility": "6.28.1",
-    "babylonjs-gui": "6.28.1",
-    "babylonjs-gui-editor": "6.28.1",
-    "babylonjs-inspector": "6.28.1",
-    "babylonjs-ktx2decoder": "6.28.1",
-    "babylonjs-loaders": "6.28.1",
-    "babylonjs-materials": "6.28.1",
-    "babylonjs-node-editor": "6.28.1",
-    "babylonjs-node-geometry-editor": "6.28.1",
-    "babylonjs-post-process": "6.28.1",
-    "babylonjs-procedural-textures": "6.28.1",
-    "babylonjs-serializers": "6.28.1",
-    "babylonjs-viewer": "6.28.1",
-    "babylonjs-viewer-assets": "6.28.1"
+    "babylonjs-accessibility": "6.29.0",
+    "babylonjs-gui": "6.29.0",
+    "babylonjs-gui-editor": "6.29.0",
+    "babylonjs-inspector": "6.29.0",
+    "babylonjs-ktx2decoder": "6.29.0",
+    "babylonjs-loaders": "6.29.0",
+    "babylonjs-materials": "6.29.0",
+    "babylonjs-node-editor": "6.29.0",
+    "babylonjs-node-geometry-editor": "6.29.0",
+    "babylonjs-post-process": "6.29.0",
+    "babylonjs-procedural-textures": "6.29.0",
+    "babylonjs-serializers": "6.29.0",
+    "babylonjs-viewer": "6.29.0",
+    "babylonjs-viewer-assets": "6.29.0"
   }
 }
