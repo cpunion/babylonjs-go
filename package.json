@@ -7,7 +7,7 @@
   "author": "Li Jie",
   "license": "MIT",
   "dependencies": {
-    "babylonjs": "6.31.0",
+    "babylonjs": "6.41.0",
     "babylonjs-accessibility": "6.31.0",
     "babylonjs-gui": "6.31.0",
     "babylonjs-gui-editor": "6.31.0",
